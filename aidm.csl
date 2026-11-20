@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only" page-range-format="minimal" default-locale="en-US">
+  <info>
+    <title>Advances in Digestive Medicine (Custom)</title>
+    <id>http://www.zotero.org/styles/advances-in-digestive-medicine-custom</id>
+    <link href="http://www.zotero.org/styles/advances-in-digestive-medicine-custom" rel="self"/>
+    <category citation-format="numeric"/>
+    <category field="medicine"/>
+    <updated>2026-11-20T00:00:00+00:00</updated>
+  </info>
+
+  <macro name="author">
+    <names variable="author">
+      <name sort-separator=" " initialize-with="" name-as-sort-order="all" delimiter=", " delimiter-precedes-last="always"/>
+      <label form="short" prefix=", "/>
+      <et-al term="et-al"/>
+    </names>
+  </macro>
+
+  <macro name="title">
+    <text variable="title"/>
+  </macro>
+
+  <macro name="journal">
+    <text variable="container-title" form="short" strip-periods="true" suffix="."/>
+  </macro>
+
+  <macro name="date-volume-pages">
+    <group suffix=".">
+      <date variable="issued" suffix=";">
+        <date-part name="year"/>
+      </date>
+      <text variable="volume" suffix=":"/>
+      <text variable="page"/>
+    </group>
+  </macro>
+
+  <citation collapse="citation-number">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout vertical-align="sup" delimiter=",">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+
+  <bibliography et-al-min="7" et-al-use-first="3" second-field-align="flush">
+    <layout>
+      <text variable="citation-number" suffix="."/>
+      <group delimiter=". " suffix=". ">
+        <text macro="author"/>
+        <text macro="title"/>
+      </group>
+      <group delimiter=" ">
+        <text macro="journal"/>
+        <text macro="date-volume-pages"/>
+      </group>
+    </layout>
+  </bibliography>
+</style>
